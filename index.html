@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Création d'annonces Marketplace</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f7fb;color:#10213a}
+.hero{background:linear-gradient(135deg,#071a33,#1266d4);color:white;padding:70px 20px;text-align:center}
+.hero h1{font-size:clamp(36px,7vw,64px);margin:0 0 18px;font-weight:800}
+.hero p{font-size:clamp(19px,3vw,27px);max-width:800px;margin:0 auto 28px}
+.btn{display:inline-block;background:#ffd21a;color:#071a33;padding:16px 28px;border-radius:10px;text-decoration:none;font-weight:800;font-size:18px}
+.container{max-width:1050px;margin:auto;padding:55px 20px}
+h2{text-align:center;font-size:34px;margin:0 0 35px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:white;border-radius:16px;padding:25px;box-shadow:0 6px 22px rgba(0,0,0,.08)}
+.card h3{margin-top:0;font-size:21px}.icon{font-size:13px;margin-bottom:12px;color:#1266d4;font-weight:800;letter-spacing:1px}
+.steps{counter-reset:step}.step{position:relative;padding:22px 22px 22px 65px;background:white;border-radius:14px;margin:14px 0;box-shadow:0 4px 16px rgba(0,0,0,.06)}.step:before{counter-increment:step;content:counter(step);position:absolute;left:20px;top:20px;background:#1266d4;color:white;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-weight:bold}
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}.price{text-align:center;background:white;border-radius:16px;padding:28px;border:2px solid #e5eaf2}.price.featured{border-color:#1266d4}.price strong{display:block;font-size:42px;margin:12px 0;color:#1266d4}.price h3{margin:0}
+.example{background:#071a33;color:white;border-radius:18px;padding:30px}.example .listing{background:white;color:#10213a;border-radius:12px;padding:22px;max-width:650px;margin:auto}.tag{display:inline-block;background:#eaf2ff;color:#1266d4;padding:7px 10px;border-radius:20px;margin:4px;font-size:13px}
+.cta{text-align:center;background:#1266d4;color:white;padding:60px 20px}.cta h2{margin-bottom:15px}.cta p{font-size:20px}
+footer{text-align:center;padding:25px;background:#061326;color:#dce6f5}
+.small{font-size:14px;color:#637087}
+
+.formbox{max-width:850px;margin:auto;background:white;padding:30px;border-radius:18px;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.formgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+label{font-weight:700;display:block;margin-bottom:7px}
+input,select,textarea{width:100%;padding:13px;border:1px solid #d8dfeb;border-radius:9px;font:inherit}
+textarea{min-height:110px;resize:vertical}
+.full{grid-column:1/-1}
+.check{display:flex;gap:10px;align-items:flex-start;font-weight:normal}
+.check input{width:auto;margin-top:4px}
+.submit{border:0;cursor:pointer;margin-top:10px}
+.notice{background:#eef5ff;padding:14px;border-radius:10px;font-size:14px;margin-bottom:20px}
+</style>
+</head>
+<body><header style="background:#061326;padding:14px 20px;text-align:center"><img src="logo.svg" alt="VendsMoi" style="width:min(190px,55vw)"></header>
+
+<section class="hero">
+  <h1>Des annonces qui attirent l'attention.</h1>
+  <p>Je crée pour vous des annonces Facebook Marketplace claires, professionnelles et prêtes à publier.</p>
+  <a class="btn" href="#demande">Je veux faire créer mon annonce</a>
+</section>
+
+<section class="container">
+  <h2>Vous avez des articles à vendre?</h2>
+  <div class="grid">
+    <div class="card"><div class="icon">PHOTO</div><h3>Photos optimisées</h3><p>Recadrage et présentation plus attrayante de vos photos.</p></div>
+    <div class="card"><div class="icon">TITRE</div><h3>Titre accrocheur</h3><p>Un titre clair qui permet à l'acheteur de comprendre rapidement ce que vous vendez.</p></div>
+    <div class="card"><div class="icon">INFO</div><h3>Description complète</h3><p>Les informations importantes sont organisées clairement.</p></div>
+    <div class="card"><div class="icon">PRIX</div><h3>Prix suggéré</h3><p>Une aide pour positionner votre article selon les informations disponibles.</p></div>
+    <div class="card"><div class="icon">SEO</div><h3>Mots-clés et catégorie</h3><p>Des choix pertinents pour faciliter la découverte de l'annonce.</p></div>
+    <div class="card"><div class="icon">PUBLIER</div><h3>Publication</h3><p>Publication avec votre autorisation, selon les modalités convenues.</p></div>
+  </div>
+</section>
+
+<section class="container">
+  <h2>Comment ça fonctionne?</h2>
+  <div class="steps">
+    <div class="step"><h3>Vous envoyez vos photos et informations</h3><p>Article, état, marque/modèle, prix souhaité et détails utiles.</p></div>
+    <div class="step"><h3>Je prépare votre annonce</h3><p>Titre, description, prix suggéré, catégorie, tags et présentation.</p></div>
+    <div class="step"><h3>Vous vérifiez</h3><p>Vous approuvez le contenu avant la publication.</p></div>
+    <div class="step"><h3>L'annonce est publiée</h3><p>La publication est faite avec votre autorisation.</p></div>
+    <div class="step"><h3>Vous gérez les acheteurs</h3><p>Vous restez responsable des messages, négociations et remises des articles.</p></div>
+  </div>
+</section>
+
+
+<section class="container" id="demande">
+  <h2>Demander la création de votre annonce</h2>
+  <div class="formbox">
+    <div class="notice">
+      Remplissez le formulaire et ajoutez les photos de votre article. Après réception,
+      je prépare votre annonce et je vous contacte pour la suite.
+    </div>
+
+    <form name="demande-marketplace" method="POST" data-netlify="true" action="/merci.html" enctype="multipart/form-data">
+      <input type="hidden" name="form-name" value="demande-marketplace">
+      <input type="hidden" name="subject" value="Nouvelle demande - Annonce Marketplace">
+
+      <div class="formgrid">
+        <div>
+          <label for="nom">Nom *</label>
+          <input id="nom" name="Nom" required>
+        </div>
+
+        <div>
+          <label for="email">Courriel *</label>
+          <input id="email" name="Courriel" type="email" required>
+        </div>
+
+        <div>
+          <label for="telephone">Téléphone</label>
+          <input id="telephone" name="Téléphone">
+        </div>
+
+        <div>
+          <label for="article">Article à vendre *</label>
+          <input id="article" name="Article" placeholder="Ex. Télévision Samsung 55 po" required>
+        </div>
+
+        <div>
+          <label for="marque">Marque</label>
+          <input id="marque" name="Marque">
+        </div>
+
+        <div>
+          <label for="modele">Modèle</label>
+          <input id="modele" name="Modèle">
+        </div>
+
+        <div>
+          <label for="etat">État *</label>
+          <select id="etat" name="État" required>
+            <option value="">Choisir</option>
+            <option>Neuf</option>
+            <option>Comme neuf</option>
+            <option>Très bon état</option>
+            <option>Bon état</option>
+            <option>Usagé</option>
+            <option>À réparer</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="prix">Prix souhaité ($) *</label>
+          <input id="prix" name="Prix souhaité" type="number" min="0" step="0.01" required>
+        </div>
+
+        <div>
+          <label for="negociable">Prix négociable?</label>
+          <select id="negociable" name="Prix négociable">
+            <option>Oui</option>
+            <option>Non</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="secteur">Ville / secteur *</label>
+          <input id="secteur" name="Ville ou secteur" required>
+        </div>
+
+        <div>
+          <label for="remise">Remise de l'article</label>
+          <select id="remise" name="Remise">
+            <option>Ramassage seulement</option>
+            <option>Livraison possible</option>
+            <option>Ramassage et livraison</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="formule">Formule *</label>
+          <select id="formule" name="Formule" required>
+            <option value="">Choisir</option>
+            <option>1 annonce — 10 $</option>
+            <option>10 annonces — 75 $</option>
+            <option>25 annonces — 150 $</option>
+          </select>
+        </div>
+
+        <div class="full">
+          <label for="details">Informations supplémentaires</label>
+          <textarea id="details" name="Informations supplémentaires" placeholder="Dimensions, accessoires, défauts, raison de la vente, etc."></textarea>
+        </div>
+
+        <div class="full">
+          <label for="photos">Photos de l'article</label>
+          <input id="photos" name="Photos" type="file" accept="image/*" multiple>
+          <p class="small">Ajoutez les meilleures photos disponibles. La limite d'envoi dépendra du service de formulaire utilisé.</p>
+        </div>
+
+        <div class="full">
+          <label class="check">
+            <input type="checkbox" name="Autorisation" value="J'autorise la création de mon annonce à partir des informations et photos fournies." required>
+            <span>J'autorise la création de mon annonce à partir des informations et photos fournies. *</span>
+          </label>
+        </div>
+
+        <div class="full">
+          <button class="btn submit" type="submit">Envoyer ma demande</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="container" id="tarifs">
+  <h2>Tarifs simples</h2>
+  <div class="prices">
+    <div class="price"><h3>À l'unité</h3><strong>10 $</strong><p>1 annonce</p></div>
+    <div class="price featured"><h3>Forfait 10</h3><strong>75 $</strong><p>10 annonces</p></div>
+    <div class="price"><h3>Forfait 25</h3><strong>150 $</strong><p>25 annonces</p></div>
+  </div>
+  <p class="small" style="text-align:center;margin-top:20px">Aucune commission sur vos ventes. Vous payez pour la création des annonces.</p>
+</section>
+
+<section class="container">
+  <h2>Exemple d'annonce</h2>
+  <div class="example">
+    <div class="listing">
+      <h3>Télévision 55 po 4K Smart TV — Très bon état</h3>
+      <p><strong>250 $</strong></p>
+      <p>Télévision en très bon état et fonctionnelle. Télécommande incluse. Remise en personne. Écrivez pour plus d'informations.</p>
+      <span class="tag">Télévision</span><span class="tag">4K</span><span class="tag">Smart TV</span><span class="tag">Électronique</span><span class="tag">Marketplace</span>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Vous avez des articles à vendre?</h2>
+  <p>Envoyez-moi vos photos et vos informations. Je m'occupe de créer vos annonces.</p>
+  <a class="btn" href="mailto:VOTRE_EMAIL@EXEMPLE.COM?subject=Création%20d'annonce%20Marketplace">Écrivez-moi</a>
+</section>
+
+<footer>
+  <strong>Création d'annonces Marketplace</strong><br>
+  Service simple • Rapide • Professionnel
+</footer>
+
+</body>
+</html>
